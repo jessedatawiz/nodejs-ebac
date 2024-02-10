@@ -1,0 +1,19 @@
+{
+  "name": "modulo_5_ebac",
+  "version": "0.0.1",
+  "description": "Modelagem de uma pagina de pizzaria",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jesse Rodrigues",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mongoose": "^8.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}

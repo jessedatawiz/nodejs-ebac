@@ -1,1 +1,31 @@
-<p>Rota raiz da pizzaria MAMA MIA da <%=nomeDoUsuario %></p>
+<p>Rota raiz de pedidos da pizzaria do <%= nomeDoUsuario %>!</p>
+
+<ul>
+    <% pedidos.forEach((perfil) => { %>
+        <% if(perfil.pedidosRecentes && perfil.pedidosRecentes.length > 0) { %>
+            <% perfil.pedidosRecentes.forEach((pedido) => { %>
+                <li>
+                    Pedido de <%= perfil.nome %>
+                    <ul>
+                        <li>Idade: <%= perfil.idade %></li>
+                        <li>Endereço: <%= perfil.endereco %></li>
+                        <li>Preferências: <%= perfil.preferencias.join(", ") %></li>
+                        <li>Data do Pedido: <%= pedido.data %></li>
+                        <li>Total: $<%= pedido.total.toFixed(2) %></li>
+                        <li>Pizzas:
+                            <ul>
+                                <% pedido.pizzas.forEach((pizza) => { %>
+                                    <li>
+                                        Sabor: <%= pizza.sabor %>, Tamanho: <%= pizza.tamanho %>, Borda recheada: <%= pizza.bordaRecheada ? 'Sim' : 'Não' %>
+                                    </li>
+                                <% }) %>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            <% }) %>
+        <% } else { %>
+            <li>Nenhum pedido recente encontrado para <%= perfil.nome %>.</li>
+        <% } %>
+    <% }) %>    
+</ul>

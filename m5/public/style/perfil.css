@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #0F1111; /* Amazon uses dark grey text for readability */
+    background-color: #EAEDF0; /* A soft background color similar to Amazon's page background */
+    font-size: 16px; /* Standard for readability */
+    padding: 20px; /* Add some padding around the content */
+}
+
+h1 {
+    color: #131921; /* A slightly darker shade for headings, similar to Amazon's logo color */
+    text-align: center;
+    margin-bottom: 20px; /* Add some space before the list starts */
+}
+
+ul.purchases {
+    list-style: none; /* Remove default list styling */
+    margin: 0 auto; /* Center the list */
+    padding: 0;
+    max-width: 600px; /* Set a max width for the list */
+}
+
+ul.purchases li {
+    background-color: #ffffff; /* White background for each item for clean look */
+    margin-bottom: 10px; /* Space between items */
+    padding: 15px; /* Padding inside each item for space */
+    border: 1px solid #DDDDDD; /* Light border similar to Amazon's item borders */
+    border-radius: 4px; /* Soft rounded corners */
+    color: #0F1111; /* Matching the body text color */
+}
+
+/* Adjusting .degrade class for a more subtle appearance */
+.degrade {
+    color: #131921; /* Solid text color */
+    background-color: transparent; /* Removing background color for a cleaner look */
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px; /* Space after the header */
+    border-radius: 4px; /* Optional: rounded corners */
+}
