@@ -9,16 +9,17 @@ const {Menu, Pedido, Perfil, connect} = require('./models');
 const routerPrincipal = require('./routes/principal');
 const routerPerfil = require('./routes/perfil');
 const routerMenu = require('./routes/menu');
+const routerPedido = require('./routes/pedido');
 
 // Inicializar o Express e Conectar ao MongoDB
 const app = express();
 const PORT = 3000;
 
-app.use(express.json()); // Para parsear JSON no corpo das requisições
-
 // Definindo as rotas
+
+app.use('/perfil',routerPerfil);
 app.use('/menu', routerMenu);
-app.use('/perfil', routerPerfil);
+app.use('/pedido', routerPedido);
 app.use('/', routerPrincipal);
 
 app.listen(PORT, () => {
